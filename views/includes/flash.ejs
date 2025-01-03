@@ -1,0 +1,19 @@
+  <body>
+      <div class="row">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7 mx-auto">
+                  <% if (success && success.length) { %>
+                        <div class="alert alert-success alert-dismissible  fade show " role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                        <%= success %>
+                  </div>
+                  <%} %>
+                  <% if (error && error.length) { %>
+                        <div class="alert alert-danger  alert-dismissible fade show" role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="close"></button>
+                        <%= error %>
+                  </div>
+                  <%} %>
+            </div>
+      </div> 
+  </body>
+    

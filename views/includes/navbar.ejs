@@ -1,0 +1,47 @@
+<div class="row nav-container sticky-top">
+  <nav class="navbar navbar-expand-lg bg-body-light border-bottom py-md-3 sticky-top">
+    <div class="container-fluid ms-3 ">
+      <a class="navbar-brand" href="/listings">
+        <i class="fa-solid fa-compass"></i></a>
+      <a class="navbar-brand" href="/listings"><span class="h2 fw-bold text-danger"><span
+            class="d-none d-sm-inline ">Cognifyz </span> &nbsp;Internship</span></a>
+      <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mt-3 mt-lg-0 ms-lg-3" id="navbarNav">
+        <form class="d-flex search-form d-block order-2 ms-auto" role="search" action="/listings" method="get">
+          <input name="search" class="form-control me-1 me-lg-3 search-inp" type="search"
+            placeholder="Search Destinations" aria-label="Search" />
+          <button class="btn search-btn d-flex ms-3 aline-items-center" type="submit">
+            <span><i class="fa-solid fa-magnifying-glass"></i></span> <span class="">Search</span>
+          </button>
+        </form>
+        <ul class="navbar-nav order-1">
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link" href="/listings">Explore</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto me-3 order-3">
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link" style="text-wrap: nowrap;" href="/listings/new">Airbnb your home</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <% if(!currUser){%>
+              <a class="nav-link active" href="/signup"><b> <i class="fa-solid fa-user-plus me-1 text-primary"></i>
+                  SignUp</b></a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link" href="/login"><b><i class="fa-solid fa-arrow-right-to-bracket me-1 text-primary"></i>
+                LogIn</b></a>
+          </li>
+          <% } else{%>
+            <li class="nav-item ms-lg-3">
+              <a class="nav-link" href="/logout"><b><i class="fa-solid fa-power-off me-1 text-danger"></i>
+                  LogOut</b></a>
+            </li>
+            <% } %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
